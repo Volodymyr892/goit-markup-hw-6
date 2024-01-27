@@ -61,6 +61,7 @@ address{
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .header-container{
+    padding: 16px;
     display: flex;
     align-items: center;
 }
@@ -86,7 +87,7 @@ address{
 }
 
 .header-menu-list {
-    display: flex;
+    display: none;
     gap: 40px;
 }
 
@@ -130,7 +131,7 @@ address{
 }
 
 .header-addres-list {
-    display: flex;
+    display: none;
     gap: 40px;
 }
 
@@ -147,6 +148,139 @@ address{
 .heaader-addres-link:focus {
     color:#404BBF;
 }
+
+.menu-open-btn {
+    border: none;
+    background-color:#FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon-btn {
+    fill: #2F2F37;
+}
+/* ?--------------------mob-menu---------------------- */
+
+.mob-menu {
+    position: fixed;
+    top:0;
+    background-color: #FFF;;
+    width: 100%;
+    height: 100vh;
+    padding-top: 72px;
+    padding-right: 24px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.menu-close-btn {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        padding: 0;
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        background-color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-class-icon {}
+
+.mob-menu-list {
+}
+
+.mob-menu-item {
+    margin-bottom: 40px;
+}
+
+.mob-menu-link {
+    color: #2E2F42;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+}
+
+.mob-current {
+    position: relative;
+    color: #404bbf;
+}
+.mob-current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    height: 4px;
+    width: 100%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu-link:hover,
+.mob-menu-link:focus {
+    color: #404BBF;
+}
+
+.mob-addres-list {
+    margin-top: 168px;
+    margin-bottom: 48px;
+}
+
+.mob-addres-item:not(:last-child){
+    margin-bottom: 24px;
+}
+
+.mob-addres-link {
+    color: #434455;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-addres-item:hover,
+.mob-addres-item:focus {
+    color: #4D5AE5;
+}
+.mob-list-icon {
+    padding-bottom: 40px;
+    display: flex;
+        gap: 40px;
+        align-items: center;
+}
+
+.mob-item-lcon .mob-link{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #4D5AE5;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-item-lcon .mob-link:hover,
+.mob-item-lcon .mob-link:focus {
+    background-color: #404BBF;
+}
+
+.mob-icon {
+    fill: #f4f4fd;
+}
+
 
 
 /*!----------------------------------------*/
@@ -655,9 +789,7 @@ address{
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn{
 
-}
 .modal-close-btn:hover > .modal-class-icon,
 .modal-close-btn:focus > .modal-class-icon{
     fill: #FFFFFF;
@@ -753,6 +885,8 @@ address{
 }
 
 .check-text{
+    display: flex;
+    align-items: center;
     color:  #8E8F99;
     font-size: 12px;
     font-weight: 400;
@@ -895,20 +1029,30 @@ address{
             display: flex;
             gap: 24px;
         }
-                .footer-form-btn {
-                    margin:unset;
-                    margin-top: unset;
-                }
+        .footer-form-btn {
+             margin:unset;
+            margin-top: unset;
+        }
 
 
 
-    .modal{
+        .modal{
         padding: 72px 24px 24px 24px;
         width: 408px;
         min-height: 584px;
-    }
+        }
         .modal-input,.modal-comment{
             width: 360px;
+        }
+
+        .header-menu-list {
+            display: flex;
+        }
+        .header-addres-list {
+            display: block;
+        }
+        .menu-open-btn, .mob-menu{
+            display: none;
         }
 }
 /** -------------------------------------------------------------------------- */
@@ -1005,5 +1149,9 @@ address{
         }
         .footer-container-soc {
             margin-left: unset;
+        }
+
+        .header-addres-list {
+            display: flex;
         }
 }
