@@ -302,7 +302,7 @@ address{
 }
 @media screen and (min-device-pixel-ratio: 2),
 (min-resolution: 2dppx), (min-resolution: 192dpi){
-    .hero{ background-image: linear-gradient(
+    .hero-conteiner{ background-image: linear-gradient(
         rgba(46, 47, 66, 0.70),
         rgba(46, 47, 66, 0.70)),
         url(../images/dark-bg-mob-2x-min.jpg);
@@ -310,13 +310,10 @@ address{
 }
 
 .hero-container{
-    background-color: #2E2F42;
     text-align: center;
-    /* background-image: linear-gradient(rgba(46, 47, 66, 0.70),
-    rgba(46, 47, 66, 0.70)),
-    url(../images/beagraund.jpg); */
     background-repeat: no-repeat;
-    background-position: 50% 50%; 
+    background-position: 50% 50%;
+
 }
 
 .hero-title {
@@ -328,7 +325,6 @@ address{
     letter-spacing: 0.02em;
     margin: 0  auto;
     max-width: 496px;
-    /* margin-bottom: 48px; */
     margin-bottom: 72px;
 }
 
@@ -985,16 +981,10 @@ address{
         .hero-title {
             margin-bottom: 36px;
         }
-        .hero{
-            background-image: linear-gradient(
-            rgba(46, 47, 66, 0.70),
-            rgba(46, 47, 66, 0.70)),
-            url(../images/dark-bg-tab-min.jpg);
-        }
                 @media screen and (min-device-pixel-ratio: 2),
                 (min-resolution: 2dppx),
                 (min-resolution: 192dpi) {
-                    .hero {
+                    .hero-conteiner {
                         background-image: linear-gradient(
                             rgba(46, 47, 66, 0.70),
                             rgba(46, 47, 66, 0.70)),
