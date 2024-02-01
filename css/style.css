@@ -662,7 +662,7 @@ address{
     /* margin-right: 120px; */
 }
 .footer-container-soc{
-    margin-top: 72px;
+    padding-top: 72px;
 }
 
 .footer-form{
@@ -1021,7 +1021,7 @@ address{
             margin-top:unset;
         }
         .footer-container-soc {
-            margin-top: unset;
+            padding-top: unset;
             margin-left: 24px;
         }
         .footer-text-input {
