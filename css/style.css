@@ -135,15 +135,17 @@ address{
     gap: 40px;
 }
 
-.header-addres-item {}
+.header-addres-item:not(:last-child){
+    margin-bottom: 12px;
+}
 
-.heaader-addres-link {
+/* .heaader-addres-link {
     color:#434455;
     font-size:16px;
     line-height:1.5;
     letter-spacing:0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-}
+} */
 .heaader-addres-link:hover,
 .heaader-addres-link:focus {
     color:#404BBF;
@@ -302,7 +304,7 @@ address{
 }
 @media screen and (min-device-pixel-ratio: 2),
 (min-resolution: 2dppx), (min-resolution: 192dpi){
-    .hero-conteiner{ background-image: linear-gradient(
+    .hero{ background-image: linear-gradient(
         rgba(46, 47, 66, 0.70),
         rgba(46, 47, 66, 0.70)),
         url(../images/dark-bg-mob-2x-min.jpg);
@@ -367,7 +369,7 @@ address{
 .features-list-bord {
     display: flex;
     gap: 24px;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 
 .features-item-bord {
@@ -662,7 +664,7 @@ address{
     /* margin-right: 120px; */
 }
 .footer-container-soc{
-    padding-top: 72px;
+    margin-top: 72px;
 }
 
 .footer-form{
@@ -721,7 +723,7 @@ address{
 .footer-input-icon{
     width: 24px;
     height: 24px;
-    margin-left: 16px;
+    /* margin-left: 16px; */
     fill: #FFFFFF;
     display: inline-flex;
     align-items: center;
@@ -729,9 +731,9 @@ address{
 
 }
 .footer-modal{
-    padding-top: 72px;
+    margin-top: 72px;
     /* margin-left: 40px; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 /* !----------------------------------------- */
@@ -973,15 +975,18 @@ address{
             gap: 72px 24px; 
         }
         .features-item {
-            margin-bottom: 0;
+            /* margin-bottom: 0; */
             width: calc((100% - 24px ) / 2);
         }
+                .features-item:not(:last-child) {
+                    margin-bottom: 0;
+                }
                 .features-subtitle {
                     text-align: start;
                 }
 
         .hero {  
-            padding: 112px 136px;
+            padding: 112px 0;
             background-image: linear-gradient(
                 rgba(46, 47, 66, 0.70),
                 rgba(46, 47, 66, 0.70)),
@@ -995,7 +1000,7 @@ address{
                 @media screen and (min-device-pixel-ratio: 2),
                 (min-resolution: 2dppx),
                 (min-resolution: 192dpi) {
-                    .hero-conteiner {
+                    .hero {
                         background-image: linear-gradient(
                             rgba(46, 47, 66, 0.70),
                             rgba(46, 47, 66, 0.70)),
@@ -1014,6 +1019,7 @@ address{
             display: inline-block;
         }
         .footer-container-one {
+            gap: 24px;
             display: flex;
         }
         .footer-text-social{
@@ -1021,8 +1027,8 @@ address{
             margin-top:unset;
         }
         .footer-container-soc {
-            padding-top: unset;
-            margin-left: 24px;
+            margin-top: unset;
+            /* margin-left: 24px; */
         }
         .footer-text-input {
             text-align: start;
@@ -1053,8 +1059,18 @@ address{
         .header-addres-list {
             display: block;
         }
+                .heaader-addres-link {
+                    color: #434455;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    letter-spacing: 0.02em;
+                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
         .header-container{
             padding: 0;
+            padding-left: 16px;
+            padding-right: 16px;
         }
         .menu-open-btn, .mob-menu{
             display: none;
@@ -1147,6 +1163,7 @@ address{
                     max-width: 1158px;
                 }
         .footer-container {
+            gap: 80px;
             display: flex;
         align-items: baseline;
         }
@@ -1154,12 +1171,15 @@ address{
             margin-top: unset;
             text-align: start;
             }
+         .footer-container-one{
+            gap: 120px;
+         }
         .footer-logo {
-            margin-right: 120px;
+            /* margin-right: 120px; */
         }
         .footer-modal {
-            padding-top: unset;
-            margin-left: 40px;
+            margin-top: unset;
+            /* margin-left: 40px; */
         }
         .footer-container-soc {
             margin-left: unset;
@@ -1167,5 +1187,11 @@ address{
 
         .header-addres-list {
             display: flex;
+        }
+        .heaader-addres-link {
+            font-size: 16px;
+        }
+        .header-addres-item:not(:last-child) {
+            margin-bottom: 0;
         }
 }
