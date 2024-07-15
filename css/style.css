@@ -391,7 +391,6 @@ address{
 
 .features-item:not(:last-child) {
     margin-bottom: 72px;
-
 }
 
 .features-subtitle {
